@@ -1,6 +1,6 @@
 '===============================================================================
-'[ŠT—v]
-'  Windows11‚Å’Ç‰Á‚Æ‚È‚Á‚½ƒRƒ“ƒeƒLƒXƒgƒƒjƒ…[‚ð–³Œø‰»‚µ‚½‚Ì‚ð—LŒø‰»‚µ‚ÄWindows11Žd—l‚É–ß‚·
+'[æ¦‚è¦]
+'  Windows11ã§è¿½åŠ ã¨ãªã£ãŸã‚³ãƒ³ãƒ†ã‚­ã‚¹ãƒˆãƒ¡ãƒ‹ãƒ¥ãƒ¼ã‚’ç„¡åŠ¹åŒ–ã—ãŸã®ã‚’æœ‰åŠ¹åŒ–ã—ã¦Windows11ä»•æ§˜ã«æˆ»ã™
 '===============================================================================
 
 Option Explicit
@@ -8,7 +8,7 @@ Option Explicit
 Dim objAppl
 
 '===============================================================================
-' ŠÇ—ŽÒƒ‚[ƒh‚ÅŽÀs‚·‚é‚½‚ßAVBS‚ðŠÇ—ŽÒƒ‚[ƒh‚ÅÄŽÀs‚·‚é
+' ç®¡ç†è€…ãƒ¢ãƒ¼ãƒ‰ã§å®Ÿè¡Œã™ã‚‹ãŸã‚ã€VBSã‚’ç®¡ç†è€…ãƒ¢ãƒ¼ãƒ‰ã§å†å®Ÿè¡Œã™ã‚‹
 '===============================================================================
 
 Set objAppl = Wscript.CreateObject("Shell.Application")
@@ -19,25 +19,25 @@ End If
  
 
 '===============================================================================
-' Ø‘ÖŠm”F‚ÌƒƒbƒZ[ƒWƒ{ƒbƒNƒX‚ð•\Ž¦‚·‚é
+' åˆ‡æ›¿ç¢ºèªã®ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ãƒœãƒƒã‚¯ã‚¹ã‚’è¡¨ç¤ºã™ã‚‹
 '===============================================================================
 
-' Šm”FƒƒbƒZ[ƒWƒ{ƒbƒNƒX•\Ž¦—p
+' ç¢ºèªãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ãƒœãƒƒã‚¯ã‚¹è¡¨ç¤ºç”¨
 Dim strMessage
 
-' ƒCƒ“ƒXƒg[ƒ‹ŠJŽn‚ÌƒƒbƒZ[ƒWƒ{ƒbƒNƒX‚ð•\Ž¦‚·‚é
-strMessage = "ƒRƒ“ƒeƒLƒXƒgƒƒjƒ…[‚ð—LŒø‰»‚µ‚Ü‚·B" & vbCr & vbCr
+' åˆ‡æ›¿é–‹å§‹ã®ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ãƒœãƒƒã‚¯ã‚¹ã‚’è¡¨ç¤ºã™ã‚‹
+strMessage = "ã‚³ãƒ³ãƒ†ã‚­ã‚¹ãƒˆãƒ¡ãƒ‹ãƒ¥ãƒ¼ã‚’æœ‰åŠ¹åŒ–ã—ã¾ã™ã€‚" & vbCr & vbCr
 
-MsgBox strMessage, vbInformation + vbSystemModal, "ƒRƒ“ƒeƒLƒXƒgƒƒjƒ…[—LŒø‰»"
+MsgBox strMessage, vbInformation + vbSystemModal, "ã‚³ãƒ³ãƒ†ã‚­ã‚¹ãƒˆãƒ¡ãƒ‹ãƒ¥ãƒ¼æœ‰åŠ¹åŒ–"
 
 '===============================================================================
-' ƒtƒ@ƒCƒ‹ƒRƒs[‚ðŽÀs‚·‚é
+' ãƒ•ã‚¡ã‚¤ãƒ«ã‚³ãƒ”ãƒ¼ã‚’å®Ÿè¡Œã™ã‚‹
 '===============================================================================
 
-' ƒtƒ@ƒCƒ‹ˆ—ƒIƒuƒWƒFƒNƒg
+' ãƒ•ã‚¡ã‚¤ãƒ«å‡¦ç†ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
 Dim objFileSys
 
-' ƒtƒ@ƒCƒ‹ˆ—ƒIƒuƒWƒFƒNƒg‚ð¶¬‚·‚é
+' ãƒ•ã‚¡ã‚¤ãƒ«å‡¦ç†ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’ç”Ÿæˆã™ã‚‹
 Set objFileSys = CreateObject("Scripting.FileSystemObject")
 
 Dim objShell
@@ -49,28 +49,29 @@ path = fso.GetFile(WScript.ScriptFullName).ParentFolder.Path
 
 objShell.currentDirectory = path & "\bat"
 
-If objFileSys.FileExists("VƒVƒXƒeƒ€‚Ö.bat") Then
+If objFileSys.FileExists("æ–°ã‚·ã‚¹ãƒ†ãƒ ã¸.bat") Then
  
-    ' batƒtƒ@ƒCƒ‹‚ðŽÀs‚·‚é
-    objShell.Run "VƒVƒXƒeƒ€‚Ö.bat",0,True
+    ' batãƒ•ã‚¡ã‚¤ãƒ«ã‚’å®Ÿè¡Œã™ã‚‹
+    objShell.Run "æ–°ã‚·ã‚¹ãƒ†ãƒ ã¸.bat",0,True
 
-    ' ƒCƒ“ƒXƒg[ƒ‹Š®—¹‚ÌƒƒbƒZ[ƒWƒ{ƒbƒNƒX‚ð•\Ž¦‚·‚é
-    strMessage = "ƒRƒ“ƒeƒLƒXƒgƒƒjƒ…[‚ð—LŒø‰»‚µ‚Ü‚µ‚½B" & vbCr & vbCr
+    ' åˆ‡æ›¿å®Œäº†ã®ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ãƒœãƒƒã‚¯ã‚¹ã‚’è¡¨ç¤ºã™ã‚‹
+    strMessage = "ã‚³ãƒ³ãƒ†ã‚­ã‚¹ãƒˆãƒ¡ãƒ‹ãƒ¥ãƒ¼ã‚’æœ‰åŠ¹åŒ–ã—ã¾ã—ãŸã€‚" & vbCr & vbCr
     
-    MsgBox strMessage, vbInformation + vbSystemModal, "ƒRƒ“ƒeƒLƒXƒgƒƒjƒ…[—LŒø‰»"
+    MsgBox strMessage, vbInformation + vbSystemModal, "ã‚³ãƒ³ãƒ†ã‚­ã‚¹ãƒˆãƒ¡ãƒ‹ãƒ¥ãƒ¼æœ‰åŠ¹åŒ–"
 
 Else
 
-    ' EZParts‚ªƒCƒ“ƒXƒg[ƒ‹‚³‚ê‚Ä‚¢‚È‚¢A‚Ü‚½‚ÍWindows 32bit OS‚Ìê‡‚ÍƒGƒ‰[‚Æ‚·‚é
+    ' BATãƒ•ã‚¡ã‚¤ãƒ«ç­‰ãŒä¸è¶³ã—ã¦ã„ãŸå ´åˆã¯ï½´ï¾—ï½°
     
-    ' ŒxƒƒbƒZ[ƒW‚ð•\Ž¦‚·‚é
-    strMessage = "ƒtƒ@ƒCƒ‹‚ª³‚µ‚­ƒRƒs[‚³‚ê‚Ä‚¢‚È‚¢‚½‚ßØ‚è‘Ö‚¦‚ª‚Å‚«‚Ü‚¹‚ñB" & vbCr & vbCr
+    ' è­¦å‘Šãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’è¡¨ç¤ºã™ã‚‹
+    strMessage = "ãƒ•ã‚¡ã‚¤ãƒ«ãŒæ­£ã—ãã‚³ãƒ”ãƒ¼ã•ã‚Œã¦ã„ãªã„ãŸã‚åˆ‡ã‚Šæ›¿ãˆãŒã§ãã¾ã›ã‚“ã€‚" & vbCr & vbCr
     
-    MsgBox strMessage, vbExclamation + vbSystemModal, "ƒRƒ“ƒeƒLƒXƒgƒƒjƒ…[—LŒø‰»"
+    MsgBox strMessage, vbExclamation + vbSystemModal, "ã‚³ãƒ³ãƒ†ã‚­ã‚¹ãƒˆãƒ¡ãƒ‹ãƒ¥ãƒ¼æœ‰åŠ¹åŒ–"
 
 End If
 
-'ƒIƒuƒWƒFƒNƒg‚ð”jŠü
+'ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’ç ´æ£„
 Set objShell   = Nothing
 Set objFileSys = Nothing
+Set fso = Nothing
 
